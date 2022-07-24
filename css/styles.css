@@ -1,0 +1,512 @@
+:root {
+  --main-text-color: #757575;
+  --heading-color: #212121;
+  --accent-color: #2196f3;
+  --secondary-background-color: #f5f4fa;
+  --accent-bcg-color: #2f303a;
+  --primary-white: #ffffff;
+  --icon-color: #afb1b8;
+  --main-font: Roboto, sans-serif;
+  --logo-font: Raleway, cursive;
+}
+ul {
+  margin: 0;
+  padding: 0;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
+  padding: 0;
+}
+p {
+  margin: 0;
+  padding: 0;
+}
+body {
+  background-color: var(--primary-white);
+  color: var(--main-text-color);
+  font-family: var(--main-font);
+}
+header {
+  border-bottom: 1px solid #ececec;
+}
+body a {
+  text-decoration: none;
+}
+.container {
+  width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+.list {
+  list-style: none;
+}
+.logo {
+  margin-right: 93px;
+  color: var(--heading-color);
+  font-family: var(--logo-font);
+  font-size: 26px;
+  line-height: 1.19;
+  letter-spacing: 0.03em;
+}
+.logo-style {
+  color: var(--accent-color);
+}
+.header-style {
+  display: flex;
+  align-items: center;
+}
+.site-nav {
+  display: flex;
+}
+.site-nav .item + .item {
+  margin-left: 50px;
+}
+.site-nav .link {
+  display: block;
+  padding-top: 32px;
+  padding-bottom: 32px;
+
+  color: var(--heading-color);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+}
+.site-nav .link:hover,
+.site-nav .link:focus {
+  color: var(--accent-color);
+}
+.site-nav .current {
+  color: var(--accent-color);
+}
+.contacts {
+  display: flex;
+  margin-left: auto;
+}
+.contacts .item {
+  display: inline-flex;
+}
+.contacts .item + .item {
+  margin-left: 50px;
+}
+.contact-style {
+  display: inline-flex;
+  color: var(--main-text-color);
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.02em;
+  align-items: center;
+}
+.contact-style svg{
+  width: 16px;
+  height: 16px;
+  margin-right: 10px;
+}
+.contact-style:hover svg{
+  fill: var(--accent-color);
+}
+.contact-style:hover,
+.contact-style:focus {
+  color: var(--accent-color);
+}
+.contacts .item:nth-child(1)::before {
+  width: 16px;
+  height: 12px;
+  /* background-color: red; */
+  content: '';
+  background-image: url(../images/envelope.svg);
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.contacts .item:nth-child(2)::before {
+  width: 10px;
+  height: 16px;
+  /* background-color: red; */
+  content: '';
+  background-image: url(../images/tel.svg);
+  margin-right: 10px;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.overlay {
+  max-width: 1600px;
+  height: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url('../images/Hero.jpg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-color: var(--accent-bcg-color);
+}
+.hero {
+  color: var(--primary-white);
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  padding-top: 200px;
+  padding-bottom: 200px;
+  /* margin-bottom: 95px; не помню откуда взялся и нахуя*/
+}
+.hero-title {
+  font-weight: 900;
+  font-size: 44px;
+  line-height: 1.36;
+  text-align: center;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  margin-bottom: 30px;
+}
+.hero-button {
+  display: block;
+  margin: 0 auto;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: var(--accent-color);
+  color: var(--primary-white);
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 1.87;
+  align-items: center;
+  text-align: center;
+  letter-spacing: 0.06em;
+  padding: 10px 32px;
+  min-width: 200px;
+}
+.main-style {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.section-title {
+  color: var(--heading-color);
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 1.16;
+  text-align: center;
+  letter-spacing: 0.03em;
+  margin-bottom: 50px;
+}
+.hidden {
+  display: none;
+}
+.section {
+  padding-top: 94px;
+  padding-bottom: 94px;
+}
+.section:nth-child(2) {
+  padding-bottom: 47px;
+}
+.section:nth-child(3) {
+  padding-top: 47px;
+}
+.feature-list {
+  display: flex;
+}
+.feature-list .item {
+  margin-right: 30px;
+  width: calc((100% - 90px) / 4);
+}
+.feature-list .item:last-child {
+  margin-right: 0;
+}
+.feature-list .title {
+  margin-bottom: 10px;
+  color: var(--heading-color);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+.feature-background {
+  width: 270px;
+  height: 120px;
+  border-radius: 4px;
+  /* не могу придумать как иначе поставить поцентру иконку */
+  padding: 25px 102px;
+  margin-bottom: 30px;
+  background-color: var(--secondary-background-color);
+}
+.feature-icon {
+  width: 70px;
+  height: 70px;
+}
+.activity-list {
+  display: flex;
+}
+.activity-list .item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+}
+.activity-list .item:last-child {
+  margin-right: 0;
+}
+.team-list {
+  display: flex;
+}
+.team-list .photo {
+  display: block;
+  width: 100%;
+}
+.team-list .item {
+  background-color: var(--primary-white);
+  width: calc((100% - 90px) / 4);
+  margin-right: 30px;
+  border: 1px solid;
+  border-color: #ececec;
+  border-radius: 0px 0px 4px 4px;
+  box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
+    0px 2px 1px rgba(0, 0, 0, 0.2);
+}
+.team-list .item:last-child {
+  margin-right: 0;
+}
+.teammate-content {
+  margin-top: 30px;
+  margin-left: 50px;
+  margin-right: 50px;
+  margin-bottom: 16px;
+}
+.section .button {
+  font-family: inherit;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 1.62;
+  text-align: center;
+  letter-spacing: 0.03em;
+}
+.projects {
+  display: flex;
+  flex-wrap: wrap;
+}
+.projects .item {
+  width: calc((100% - 60px) / 3);
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+.projects .item:nth-child(3n) {
+  margin-right: 0px;
+}
+.projects .item:nth-last-child(-n + 3) {
+  margin-bottom: 0px;
+}
+.projects .item:hover {
+  box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+.thumb {
+  padding: 20px 24px;
+  border: 1px solid #eeeeee;
+  border-top: none;
+}
+.project-cover {
+  display: block;
+  width: 100%;
+}
+.section .card-title {
+  color: var(--heading-color);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 2;
+  letter-spacing: 0.06em;
+}
+.section .card-description {
+  color: var(--main-text-color);
+  font-size: 16px;
+  line-height: 1.88;
+  letter-spacing: 0.03em;
+}
+.feature-list .text {
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.team-section {
+  background-color: var(--secondary-background-color);
+}
+.team-section .teammate-name {
+  margin-bottom: 10px;
+  color: var(--heading-color);
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+.team-section .teammate-post {
+  font-size: 16px;
+  line-height: 1.19;
+  text-align: center;
+}
+.client-list{
+  display: flex;
+  justify-content: space-between;
+}
+.client-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 170px;
+  height: 92px;
+  border: 1px solid var(--icon-color);
+  border-radius: 4px;
+}
+.client-link:hover{
+  border-color: var(--accent-color);
+}
+.client-link:hover .client-icon{
+  fill: var(--accent-color);
+}
+.client-icon{
+width: 106px;
+height: 60px;
+fill: var(--icon-color);
+}
+.filter-list {
+  margin-bottom: 50px;
+  display: flex;
+  justify-content: center;
+}
+.filter-list .item {
+  margin-right: 8px;
+}
+/* кнопочка выглядит убого изза углов белых */
+.filter-list .item:hover,
+.filter-list .item:focus {
+  box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+    0px 2px 2px rgba(0, 0, 0, 0.12);
+}
+.filter-list .item:last-child {
+  margin-right: 0;
+}
+.footer-style {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  background-color: var(--accent-bcg-color);
+}
+.footer-style .logo {
+  display: inline-block;
+  margin-bottom: 20px;
+  margin-right: 0;
+  color: var(--primary-white);
+}
+.footer-style .address-style {
+  color: var(--primary-white);
+  font-style: normal;
+  font-size: 14px;
+  line-height: 1.71;
+  letter-spacing: 0.03em;
+}
+.footer-style .container {
+  display: flex;
+  align-items: baseline;
+}
+.footer-address {
+  color: var(--primary-white);
+}
+.footer-contacts {
+  color: rgba(255, 255, 255, 0.6);
+}
+.footer-list .item {
+  margin-bottom: 9px;
+}
+.footer-list .item:last-child {
+  margin-bottom: 0;
+}
+.footer-social-list{
+  display: flex;
+}
+.footer-social-link{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.footer-social-link:hover{
+  background-color: var(--accent-color);
+}
+.footer-social-list .item{
+  margin-right: 10px;
+}
+.footer-social-list .item:last-child{
+  margin-right: 0px;
+}
+.footer-social-link svg{
+  width: 20px;
+  height: 20px;
+  fill: var(--primary-white);
+}
+.social-list {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+.social-list .item {
+  margin-right: 10px;
+  box-shadow: none;
+  border: none;
+}
+.social-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+}
+.social-link:hover {
+  background-color: var(--accent-color);
+}
+.social-link svg {
+  fill: var(--icon-color);
+}
+.social-link:hover svg {
+  fill: var(--primary-white);
+}
+.social{
+  margin-left: 70px;
+}
+.social .title {
+  color: var(--primary-white);
+  font-size: 14px;
+  line-height: 1.14;
+  letter-spacing: 0.03em;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+.button {
+  border-radius: 4px;
+  border: none;
+  cursor: pointer;
+  background-color: var(--secondary-background-color);
+  padding: 6px 22px;
+  text-align: center;
+}
+.button:hover,
+.button:focus {
+  color: var(--primary-white);
+  background-color: var(--accent-color);
+}
+/* цвет заголовков #212121 */
+/* цвет основного текста #757575 */
+/* синий #2196F3 */
+/* белый #FFFFFF */
+/* подвал и хиро #2F303A */
+/* вторичный фон #F5F4FA */
